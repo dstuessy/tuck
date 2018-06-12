@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+
+const path = require('path')
+const shell = require('shelljs')
+const inquirer = require('inquirer')
+
+const template = require('../templates/application.desktop')
+const slug = path.parse(shell.pwd().stdout).base
+const dest = `/opt/${slug}`
+const link = `/usr/local/bin/${slug}`
+const configPath = `/usr/share/applications/${slug}.desktop`
+
+inquirer.prompt([
+    {
+        name: 'name',
+        type: 'input',
+        message: 'Name',
+    },
+    {
+        name: 'genericName',
+        type: 'input',
+        message: 'Generic Name',
+    },
+    {
+        name: 'bin',
+        type: 'input',
+        message: 'Binary',
+        default: slug,
+        filter: inpt => `${dest}/${inpt}`
+    },
+    {
+        name: 'comment',
+        type: 'input',
+        message: 'Comment',
+    },
+    {
+        name: 'launch',
+        type: 'input',
+        message: 'Launch',
+        default: slug,
+    },
+    {
+        name: 'icon',
+        type: 'input',
+        message: 'Icon',
+        default: 'icon.png',
+        filter: inpt => `${dest}/${inpt}`,
+    },
+    {
+        name: 'categories',
+        type: 'input',
+        message: 'Categories',
+        default: ans => ans.genericName
+    },
+]).then((details) => {
+    const { bin } = details
+    const config = template(details)
+
+    shell.cp('-r', '.', dest)
+    shell.ln('-s', bin, link)
+    shell.echo(config).to(configPath)
+});
+

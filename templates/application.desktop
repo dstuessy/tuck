@@ -1,0 +1,12 @@
+module.exports = ({ name, genericName, comment, launch, icon, categories }) => `
+[Desktop Entry]
+Name=${name}
+GenericName=${genericName}
+Comment=${comment}
+TryExec=${launch}
+Exec=${launch}
+Type=Application
+Icon=${icon}
+Categories=${categories}
+StartupNotify=false
+`;
