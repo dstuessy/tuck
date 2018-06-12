@@ -20,4 +20,4 @@ sets up a file for gnome application menus in `/usr/share/applications`.
 
 ## Requirements
 
-Node version 8+
+[Node](https://nodejs.org/en/) version 8+
