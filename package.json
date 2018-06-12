@@ -1,17 +1,17 @@
 {
-  "name": "tuck",
-  "version": "1.0.0",
-  "description": "",
-  "main": "bin/app",
-  "bin": "bin/app",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Daniel Stuessy",
-  "license": "see LICENSE in LICENSE.md",
-  "devDependencies": {
-    "inquirer": "^6.0.0",
-    "mustache": "^2.3.0",
-    "shelljs": "^0.8.2"
-  }
+    "name": "tuck",
+    "version": "1.0.0",
+    "description": "Install (tuck) folder of binaries on Linux.",
+    "main": "bin/app",
+    "bin": "bin/app",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Daniel Stuessy",
+    "license": "see LICENSE",
+    "devDependencies": {
+        "inquirer": "^6.0.0",
+        "mustache": "^2.3.0",
+        "shelljs": "^0.8.2"
+    }
 }
