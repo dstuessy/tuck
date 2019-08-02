@@ -21,3 +21,21 @@ sets up a file for gnome application menus in `/usr/share/applications`.
 ## Requirements
 
 Node version 8+
+
+
+## Running with sudo
+
+Here's a neat set of commands that will let you run `tuck` in sudo.
+
+```
+n=$(which node); \
+n=${n%/bin/node}; \
+chmod -R 755 $n/bin/*; \
+sudo cp -r $n/{bin,lib,share} /usr/local
+```
+
+source: [stack overflow][1]
+
+
+[1]: https://stackoverflow.com/questions/21215059/cant-use-nvm-from-root-or-sudo
+
