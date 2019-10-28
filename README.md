@@ -3,7 +3,7 @@
 Install (tuck) folder of binaries in your Gnome environment.
 
 Nothing more than a script to prepare an application for
-use on a unix environment. It copies the folder to `/opt`,
+use on a Gnome environment. It copies the folder to `/opt`,
 creates a sym link in `/usr/local/bin`, then finally 
 sets up a file for gnome application menus in `/usr/share/applications`.
 
