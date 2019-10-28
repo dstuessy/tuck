@@ -7,7 +7,7 @@ use on a GNOME environment. It copies the folder to `/opt`,
 creates a sym link in `/usr/local/bin`, then finally 
 sets up a file for GNOME application menus in `/usr/share/applications`.
 
-**Note:** This is a hardcoded implementation. Configurability coming soon.
+**Note:** This is a hardcoded implementation. Configurability coming ~~soon~~whenever anyone feels like it :shrug:.
 
 
 ## Usage
