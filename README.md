@@ -1,6 +1,6 @@
 # Tuck
 
-Install (tuck) folder of binaries on Linux.
+Install (tuck) folder of binaries in your Gnome environment.
 
 Nothing more than a script to prepare an application for
 use on a unix environment. It copies the folder to `/opt`,
